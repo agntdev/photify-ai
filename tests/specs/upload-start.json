@@ -1,19 +1,17 @@
 [
   {
-    "name": "Upload Selfie",
+    "name": "Upload selfie button shows prompt",
     "steps": [
       {
+        "send": { "callback": "upload:start" },
         "expect": [
           {
             "method": "sendMessage",
             "payload": {
-              "text": "Initiates selfie upload flow"
+              "text": "📸 Send me a selfie — a clear, front-facing photo works best.\n\nI'll use it to create your fashion portrait. Your photo is private and deleted after processing."
             }
           }
-        ],
-        "send": {
-          "callback": "upload:start"
-        }
+        ]
       }
     ]
   }

@@ -7,9 +7,18 @@
         "expect": [
           {
             "method": "sendMessage",
-            "payload": { "text": "👋 Welcome! Tap a button below to get started." }
+            "payload": { "text": "👋 Welcome to Photify AI!\n\nTransform your selfies into stunning fashion portraits — pick a style, and I'll create something amazing for you.\n\nTap a button below to get started." }
           }
         ]
+      }
+    ]
+  },
+  {
+    "name": "Back to menu returns to the main menu",
+    "steps": [
+      {
+        "send": { "callback": "menu:main" },
+        "expect": [{ "method": "editMessageText" }]
       }
     ]
   }

@@ -1,0 +1,18 @@
+[
+  {
+    "name": "Subscription menu shows plans",
+    "steps": [
+      {
+        "send": { "callback": "sub:show" },
+        "expect": [
+          {
+            "method": "sendMessage",
+            "payload": {
+              "text": "Your plan: Free\nCredits: 10 ⭐\n\n⭐ Pro\n$9.99/mo\n100 credits/mo · No watermark · Priority queue\n\n💎 Lifetime\n$49.99 one-time\n500 credits · No watermark · Priority queue · Forever"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

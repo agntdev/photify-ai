@@ -1,19 +1,17 @@
 [
   {
-    "name": "See My Assets",
+    "name": "Assets list shows empty state when no assets",
     "steps": [
       {
+        "send": { "callback": "assets:list" },
         "expect": [
           {
             "method": "sendMessage",
             "payload": {
-              "text": "Displays recent generated assets (images/videos)"
+              "text": "🖼 No portraits yet — upload a selfie to create your first one!"
             }
           }
-        ],
-        "send": {
-          "callback": "assets:list"
-        }
+        ]
       }
     ]
   }
